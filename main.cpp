@@ -8,6 +8,7 @@
 
 std::string input;
 std::string data;
+std::string url;
 
 int main()
 {
@@ -25,8 +26,9 @@ int main()
     std::cout << "                                        1.custom asar   " << "\n";
     std::cin >> input;
     if (input == "1") {
+        std::cout << "enter asar file url:";
+        std::cin >> url; 
         std::cout << "Downloading custom asar file...";
-        std::string url = "https://files.catbox.moe/s0zmr7.asar";
         std::string filePath = "launcher/resources/app.asar";
 
         std::string command = "curl -L " + url + " -o " + filePath;
